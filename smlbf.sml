@@ -38,12 +38,12 @@ fun run bs =
 	    if y = 0 then run' bs (xs, y, zs)
 	    else run' (bs' @ RPT bs' :: bs) (xs, y, zs)
 	  | run' [] (xs, y, zs) = (xs, y, zs)
-    in ignore  (run' bs ([], 0, []))
+    in run' bs ([], 0, [])
     end
 
 fun main () =
     case CommandLine.arguments () of
-	[fileName] => (run o parse o TextIO.inputAll o TextIO.openIn) fileName
+	[fileName] => (ignore o run o parse o TextIO.inputAll o TextIO.openIn) fileName
       | _ => print ("usage: " ^ CommandLine.name () ^ " FileName\n")
 
 val _ = main ()

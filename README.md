@@ -13,10 +13,10 @@
 ## つかいかた
 ### `sml` コマンドで実行
 ```
-sml smlbf.sml primesunder100.bf
+sml smlbf.sml primesUnder100.bf
 ```
 ### `mlton` とかでコンパイルしてから実行
 ```
 mlton smlbf.sml
-./smlbf primesunder100.bf
+./smlbf primesUnder100.bf
 ```
