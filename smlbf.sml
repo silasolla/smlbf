@@ -30,10 +30,7 @@ fun run bs =
 	    let val getChar = (valOf o TextIO.input1) TextIO.stdIn
 	    in run' bs (xs, ord getChar, zs)
 	    end
-	  | run' (PUT :: bs) (xs, y, zs) =
-	    let val m = (print o implode) [chr y]
-	    in run' bs (xs, y, zs)
-	    end
+	  | run' (PUT :: bs) (xs, y, zs) = ((print o implode) [chr y]; run' bs (xs, y, zs))
 	  | run' (RPT bs' :: bs) (xs, y, zs) =
 	    if y = 0 then run' bs (xs, y, zs)
 	    else run' (bs' @ RPT bs' :: bs) (xs, y, zs)
@@ -47,4 +44,4 @@ fun main () =
       | _ => print ("usage: " ^ CommandLine.name () ^ " FileName\n")
 
 val _ = main ()
-val _ = OS.Process.exit(OS.Process.success)
+val _ = OS.Process.exit (OS.Process.success)
