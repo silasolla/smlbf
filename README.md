@@ -1,7 +1,7 @@
 # smlbf.sml
 
 ## これはなに?
-* [暇を持て余した学生](https://sirasolra.github.io/ "sirasolra")が学習目的で制作した，難解プログラミング言語 [`Brainf*ck`](https://ja.wikipedia.org/wiki/Brainfuck "Brainf*ck (wikipedia)") のインタプリタです．
+* [暇を持て余した学生](https://silasolla.github.io/ "sirasolra")が学習目的で制作した，難解プログラミング言語 [`Brainf*ck`](https://ja.wikipedia.org/wiki/Brainfuck "Brainf*ck (wikipedia)") のインタプリタです．
 * `Standard ML` で記述しています．
 
 ## はいっているもの
